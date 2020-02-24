@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lesson 10. PopupMenu</string>
+    <string name="btn_text_color_act_main">Поменять цвет этой кнопки</string>
+    <string name="menu_item_btn_color_yellow_main">Оранжевый</string>
+    <string name="menu_item_btn_color_red_main">Красный</string>
+    <string name="menu_item_btn_color_green_main">Зеленый</string>
+    <string name="text_view_act_main">Нажмите, чтобы поменять цвет текста</string>
+</resources>
