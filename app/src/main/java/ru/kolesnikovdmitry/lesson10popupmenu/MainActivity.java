@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         public boolean onMenuItemClick(MenuItem item) {
             switch (item.getItemId()) {
                 case R.color.colorTextBlack:
-                    item.setCheckable(!item.isChecked());
-                    colorTextViewActMain = R.color.colorTextBlack;
-                    mTextViewActMain.setTextColor(getColor(colorTextViewActMain));
+                    item.setCheckable(!item.isChecked());  //заменяем флажок с незажатого на зажатый, но если уже зажатый, его нельзя выключить
+                    colorTextViewActMain = R.color.colorTextBlack;  //меняем ответственную переменную (аналог изменения ячейки базы данных)
+                    mTextViewActMain.setTextColor(getColor(colorTextViewActMain));   //изменяем интерфейс сразу.
                     break;
                 case R.color.colorTextBlue:
                     item.setCheckable(!item.isChecked());
@@ -144,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         popupMenu.getMenu().add(menuItemTextCapsId, menuItemTextCapsId, 1, "Заглавные").setCheckable(true).setChecked(isTextCaps);
         popupMenu.setOnMenuItemClickListener(onMenuItemTextColorClick);
 
+        //здесь же сразу устанавливаем нужный флажок, который определяет текущий цвет текста.
         switch (colorTextViewActMain) {
             case R.color.colorTextBlack:
                 popupMenu.getMenu().findItem(R.color.colorTextBlack).setChecked(true);
